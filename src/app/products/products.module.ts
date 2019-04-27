@@ -13,6 +13,7 @@ import { ProductsComponent } from './component/products/products.component';
 
 // SERVICES
 import * as services from './services';
+import { ProductComponent } from './component/product/product.component';
 
 // ROUTES
 export const ROUTES: Routes = [
@@ -25,6 +26,7 @@ export const ROUTES: Routes = [
 @NgModule({
   declarations: [
     ProductsComponent,
+    ProductComponent,
   ],
   imports: [
     CommonModule,

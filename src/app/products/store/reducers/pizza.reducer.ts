@@ -5,12 +5,14 @@ export interface PizzaState {
     data: Pizza[];
     loaded: boolean;
     loading: boolean;
+    entities: any;
 }
 
 export const initialState: PizzaState = {
     data: [],
     loaded: false,
     loading: false,
+    entities: null,
 }
 
 export function reducer(state = initialState, action: fromPizza.PizzaActions): PizzaState {
@@ -41,6 +43,7 @@ export function reducer(state = initialState, action: fromPizza.PizzaActions): P
     
 }
 
+export const getPizzas = (state: PizzaState) => state.data;
+export const getPizzasEntities = (state: PizzaState) => state.entities;
 export const getPizzasLoading = (state: PizzaState) => state.loading;
 export const getPizzasLoaded = (state: PizzaState) => state.loaded;
-export const getPizzas = (state: PizzaState) => state.data;
