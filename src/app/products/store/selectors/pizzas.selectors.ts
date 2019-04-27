@@ -13,7 +13,6 @@ import { Pizza } from '../../models/pizza.model';
 
 export const getPizzaState = createSelector(fromFeature.getProductsState, (state: fromFeature.ProductsState) => state.pizzas);
 export const getPizzasEntitites = createSelector(getPizzaState, fromPizzas.getPizzasEntities);
-export const getAllPizzas = createSelector(getPizzaState, fromPizzas.getPizzas);
 export const getAllPizzasLoaded = createSelector(getPizzaState, fromPizzas.getPizzasLoaded);
 export const getAllPizzasLoading = createSelector(getPizzaState, fromPizzas.getPizzasLoading);
 export const getSelectedPizza = createSelector(
